@@ -4,6 +4,18 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@theme {
+  --color-theme-900: #02012C;
+  --color-theme-800: #262540;
+  --color-theme-700: #302F4A;
+  --color-theme-600: #3C3B5E;
+  --color-theme-300: #ACACB7;
+  --color-theme-200: #D4D3D9;
+  --color-theme-orange: #FF820A;
+  --color-blue-500: #4658D9;
+  --color-blue-700: #2B1B9C;
+
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -14,8 +26,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-theme-900);
+    --foreground: var(--color-theme-900);
   }
 }
 
