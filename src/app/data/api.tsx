@@ -22,9 +22,11 @@ export default async function getWeather() {
       "relative_humidity_2m",
       "apparent_temperature",
       "weather_code",
-      "snowfall",
-      "showers",
-      "rain",
+          "wind_speed_10m",
+      "precipitation",
+      //   "snowfall",
+    //   "showers",
+    //   "rain",
     ],
     timezone: "Europe/Berlin",
     temporal_resolution: "hourly_3",
@@ -59,9 +61,11 @@ export default async function getWeather() {
             relative_humidity_2m: current.variables(1)!.value().toFixed(3),
       apparent_temperature: current.variables(2)!.value().toFixed(3),
       weather_code: current.variables(3)!.value(),
-      snowfall: current.variables(4)!.value().toFixed(3),
-      showers: current.variables(5)!.value().toFixed(3),
-      rain: current.variables(6)!.value().toFixed(3),
+      wind_speed_10m: current.variables(4)!.value().toFixed(3),
+      precipitation: current.variables(5)!.value().toFixed(3),
+    //   snowfall: current.variables(4)!.value().toFixed(3),
+    //   showers: current.variables(5)!.value().toFixed(3),
+    //   rain: current.variables(6)!.value().toFixed(3),
     },
     hourly: {
         time: [
@@ -108,9 +112,9 @@ export default async function getWeather() {
             `\nCurrent relative_humidity_2m: ${weatherData.current.relative_humidity_2m}`,
             `\nCurrent apparent_temperature: ${weatherData.current.apparent_temperature}`,
             `\nCurrent weather_code: ${weatherData.current.weather_code}`,
-            `\nCurrent snowfall: ${weatherData.current.snowfall}`,
-            `\nCurrent showers: ${weatherData.current.showers}`,
-            `\nCurrent rain: ${weatherData.current.rain}`
+            // `\nCurrent snowfall: ${weatherData.current.snowfall}`,
+            // `\nCurrent showers: ${weatherData.current.showers}`,
+            // `\nCurrent rain: ${weatherData.current.rain}`
         );
         console.log("\nHourly data", weatherData.hourly);
         console.log("\nDaily data", weatherData.daily);

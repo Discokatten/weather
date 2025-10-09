@@ -1,4 +1,5 @@
 import Hero from "./components/hero";
+import WeatherDetails from "./components/weatherdetails";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
         <article className="w-200">
           <Hero />
           {/*weather details section */}
-          <section className="h-75 mt-4"></section>
+          <section className="h-75 mt-4">
+            <WeatherDetails/>
+          </section>
 
           {/* daily forecast section */}
           <section className="h-75 mt-4">
