@@ -1,3 +1,4 @@
+import Clothes from "./components/clothes";
 import Hero from "./components/hero";
 import WeatherDetails from "./components/weatherdetails";
 
@@ -12,7 +13,8 @@ export default function Home() {
         {/* right content container */}
         <section className=" h-150 rounded-2xl bg-theme-800 min-w-100">
           {/* TO DO render clothing-details in separate component */}
-        </section>
+     <Clothes/>
+       </section>
 
         {/* left content container */}
         <article className="w-200">
