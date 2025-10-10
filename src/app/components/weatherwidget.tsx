@@ -1,21 +1,22 @@
-// import getWeather from "../data/api";
+import getWeather from "../data/api";
 import LottieComponent from "./lottiecomponent";
 
 export default async function WeatherWidget() {
-  // const weather = await getWeather();
-  // const current = weather.current;
+  const weather = await getWeather();
+  const current = weather.current;
   let location = "Stockholm, Sverige";
   return (
     <section className="flex content-center">
-      {/* animation from Lottie, TO DO change to dynamic depending on weather */}
+      {/* animation from Lottie, TO DO change animation depending on weather */}
       <LottieComponent />
+      
       {/* Mockdata when testing */}
       <div className="content-center text-center">
 
         {/* Show temperature */}
         <h2 className=" text-2xl sm:text-7xl">
-          10°C
-          {/* {current.temperature_2m.slice(0, 3)}°C */}
+          {current.temperature_2m.slice(0, 3)}°C
+          {/* 10°C */}
         </h2>
 
         {/* Show location */}
@@ -23,8 +24,8 @@ export default async function WeatherWidget() {
 
         {/* Show date and time */}
         <h3 className="m-2">
-          2025-10-09 13:45
-          {/* {current.time.toUTCString().slice(0, 22)} */}
+          {current.time.toUTCString().slice(0, 22)}
+          {/* 2025-10-09 13:45 */}
         </h3>
       </div>
     </section>
