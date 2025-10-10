@@ -1,0 +1,46 @@
+{
+  "clothes": {
+    "jacka": [
+      {
+        "name": "Vindjacka",
+        "id": "1",
+        "weather": [{ "snow": 0, "warmth": 1, "wind": 3, "rain": 2 }]
+      },
+      {
+        "name": "Regnjacka",
+        "id": "2",
+        "warmth": 2,
+        "weather": [{ "snow": 1, "wind": 3, "rain": 3 }]
+      },
+      {
+        "name": "Vinterjacka",
+        "id": "3",
+        "warmth": 3,
+        "weather": [{ "snow": 3, "wind": 2, "rain": 2 }]
+      }
+    ],
+
+    "byxor": [
+      {
+        "name": "Vanliga byxor",
+        "id": "4",
+        "size": "92",
+        "warmth": 0,
+        "weather": [{ "snow": 0, "wind": 0, "rain": 0 }]
+      },
+      {
+        "name": "Regnbyxor",
+        "id": "5",
+        "size": "52",
+        "warmth": 2,
+        "weather": [
+          {
+            "snow": 2,
+            "wind": 3,
+            "rain": 3
+          }
+        ]
+      }
+    ]
+  }
+}
