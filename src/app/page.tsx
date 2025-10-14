@@ -1,6 +1,7 @@
 import Clothes from "./components/clothes";
 import Hero from "./components/hero";
 import WeatherDetails from "./components/weatherdetails";
+import DailyForecast from "./components/dailyforecast";
 
 export default function Home() {
   return (
@@ -10,23 +11,24 @@ export default function Home() {
       </h1>
 
       <main className=" flex flex-row-reverse justify-center flex-wrap gap-4  text-white">
-        {/* right content container */}
+        {/* clothes content container */}
         <section className=" h-150 rounded-2xl bg-theme-800 min-w-100">
-          {/* TO DO render clothing-details in separate component */}
-     <Clothes/>
-       </section>
+          <Clothes />
+        </section>
 
-        {/* left content container */}
+        {/* weather content container */}
         <article className="w-200">
           <Hero />
+
           {/*weather details section */}
           <section className="h-75 mt-4">
-            <WeatherDetails/>
+            <WeatherDetails />
           </section>
 
           {/* daily forecast section */}
           <section className="h-75 mt-4">
             <h2 className="text-2xl">Daily forecast</h2>
+            <DailyForecast/>
           </section>
         </article>
       </main>
