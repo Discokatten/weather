@@ -15,7 +15,7 @@ export default async function DailyForecast() {
             <WeatherCard
               key={index}
               temp={temp.toFixed(1)}
-              code={codeArray[index]}
+              code={codeArray[index].toFixed(3)}
             />
         )
       )}

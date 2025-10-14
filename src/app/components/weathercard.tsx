@@ -5,12 +5,12 @@ export default function WeatherCard({
   code,
 }: {
   temp: string;
-  code: number;
+  code: string;
 }) {
   return (
     <li className="bg-theme-800 rounded-2xl h-35 w-25 content-center text-center mt-2">
       <p className="mt-2">{temp} °C</p>
-      <WeatherAnimation weatherCodeProps={code.toString()} />
+      <WeatherAnimation weatherCodeProps={code} />
     </li>
   );
 }
