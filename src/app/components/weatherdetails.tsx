@@ -5,7 +5,7 @@ export default async function WeatherDetails() {
   const current = weather.current;
 
   return (
-    <ul className="h-72 flex justify-between content-center text-white">
+    <ul className="flex justify-between content-center text-white">
       <li className="bg-theme-800 rounded-2xl h-35 w-25 content-center text-center">
         <p className="mb-2">Feels Like</p>
         <p>{current.apparent_temperature.slice(0, 3)} °C</p>

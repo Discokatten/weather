@@ -21,7 +21,7 @@ export default async function getWeather() {
       "apparent_temperature",
     ],
     timezone: "Europe/Berlin",
-    temporal_resolution: "hourly_3",
+    temporal_resolution: "hourly_1",
     wind_speed_unit: "ms",
   };
   const url = "https://api.open-meteo.com/v1/forecast";

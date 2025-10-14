@@ -2,6 +2,7 @@ import Clothes from "./components/clothes";
 import Hero from "./components/hero";
 import WeatherDetails from "./components/weatherdetails";
 import DailyForecast from "./components/dailyforecast";
+import TimeOfDay from "./components/timeofday";
 
 export default function Home() {
   return (
@@ -21,8 +22,9 @@ export default function Home() {
           <Hero />
 
           {/*weather details section */}
-          <section className="h-75 mt-4">
+          <section className="h-75">
             <WeatherDetails />
+            <TimeOfDay/>
           </section>
 
           {/* daily forecast section */}
