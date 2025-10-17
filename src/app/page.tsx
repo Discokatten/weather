@@ -1,10 +1,10 @@
-import Clothes from "./components/clothes";
 import Hero from "./components/hero";
 import WeatherDetails from "./components/weatherdetails";
 import DailyForecast from "./components/dailyforecast";
 import TimeOfDay from "./components/timeofday";
+import FilterClothes from "./components/filterclothes";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <h1 className="text-white text-6xl text-center m-4">
@@ -14,7 +14,7 @@ export default function Home() {
       <main className=" flex flex-row-reverse justify-center flex-wrap gap-4  text-white">
         {/* clothes content container */}
         <section className=" h-150 rounded-2xl bg-theme-800 min-w-100">
-          <Clothes />
+          <FilterClothes />
         </section>
 
         {/* weather content container */}
@@ -24,13 +24,13 @@ export default function Home() {
           {/*weather details section */}
           <section className="h-75">
             <WeatherDetails />
-            <TimeOfDay/>
+            <TimeOfDay />
           </section>
 
           {/* daily forecast section */}
           <section className="h-75 mt-4">
             <h2 className="text-2xl">Daily forecast</h2>
-            <DailyForecast/>
+            <DailyForecast />
           </section>
         </article>
       </main>
