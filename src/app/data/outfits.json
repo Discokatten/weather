@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Tunn mössa",
+    "type": "Hat",
+    "id": "1",
+    "layer": "hat",
+    "warmth": 2
+  },
+  {
+    "name": "Tjock mössa",
+    "type": "Hat",
+    "id": "1",
+    "layer": "hat",
+    "warmth": 3
+  },
+  {
+    "name": "Sandaler",
+    "type": "Shoe",
+    "id": "1",
+    "layer": "shoe",
+    "warmth": 0
+  },
+  {
+    "name": "Sneaker/stövel",
+    "type": "Shoe",
+    "id": "2",
+    "layer": "shoe",
+    "warmth": 1
+  },
+  {
+    "name": "Kängor",
+    "type": "Shoe",
+    "id": "3",
+    "layer": "shoe",
+    "warmth": 3
+  },
+  {
+    "name": "Sommarjacka",
+    "type": "Jacket",
+    "id": "1",
+    "layer": "out",
+    "warmth": 1
+  },
+  {
+    "name": "Regnjacka",
+    "type": "Jacket",
+    "id": "2",
+    "layer": "rain",
+    "warmth": 2
+  },
+  {
+    "name": "Vinterjacka",
+    "type": "Jacket",
+    "id": "3",
+    "layer": "snow",
+    "warmth": 4
+  },
+  {
+    "name": "Vindfleece/skaljacka",
+    "type": "Jacket",
+    "id": "4",
+    "layer": "mid",
+    "warmth": 3
+  },
+  {
+    "name": "Tjocktröja/fleece/ull",
+    "type": "Jacket",
+    "id": "5",
+    "layer": "mid",
+    "warmth": 2
+  },
+  {
+    "name": "Tshirt/linne",
+    "type": "Jacket",
+    "id": "6",
+    "layer": "in",
+    "warmth": 0
+  },
+  {
+    "name": "Shorts",
+    "type": "Pants",
+    "layer": "in",
+    "id": "4",
+    "size": "92",
+    "warmth": 0
+  },
+  {
+    "name": "Tights",
+    "type": "Pants",
+    "layer": "in",
+    "id": "4",
+    "size": "92",
+    "warmth": 1
+  },
+  {
+    "name": "Regnbyxor",
+    "type": "Pants",
+    "id": "5",
+    "layer": "rain",
+    "size": "52",
+    "warmth": 2
+  },
+  {
+    "name": "Tjocka byxor/fleece/ull",
+    "type": "Pants",
+    "id": "6",
+    "layer": "mid",
+    "size": "52",
+    "warmth": 2
+  },
+  {
+    "name": "Täckbyxor",
+    "type": "Pants",
+    "id": "7",
+    "layer": "snow",
+    "size": "52",
+    "warmth": 4
+  }
+]

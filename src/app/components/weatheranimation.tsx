@@ -18,6 +18,8 @@ import overcastDayDrizzle from "@bybas/weather-icons/design/fill/animation-ready
 import overcastDrizzle from "@bybas/weather-icons/design/fill/animation-ready/drizzle.svg";
 import thunderstormsDay from "@bybas/weather-icons/design/fill/animation-ready/thunderstorms-day.svg";
 import thunderstormsSnow from "@bybas/weather-icons/design/fill/animation-ready/thunderstorms-snow.svg";
+import umbrella from "@bybas/weather-icons/design/fill/animation-ready/umbrella.svg";
+import snowflake from "@bybas/weather-icons/design/fill/animation-ready/snowflake.svg";
 import Image from "next/image";
 
 export default function WeatherAnimation({
@@ -57,6 +59,8 @@ export default function WeatherAnimation({
     "95": thunderstormsDay,
     "96": thunderstormsSnow,
     "99": thunderstormsSnow,
+    "umbrella":umbrella,
+    "snowflake":snowflake,
   };
 
   return (

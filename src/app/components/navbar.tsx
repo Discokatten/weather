@@ -1,5 +1,5 @@
 import Image from "next/image"
-import MenuButton from "./menubutton"
+import MenuButton from "@/app/components/menubutton"
 
 export default function Navbar (){
     return (

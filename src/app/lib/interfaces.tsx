@@ -29,3 +29,11 @@ export interface Hourly {
   precipitation_probability: number[];
   snowfall: number[];
 }
+export interface Clothes{
+  name:string, 
+  id:string,
+  layer:string,
+  warmth:number,
+  weather?:{snow:number, warmth:number, wind:number,rain:number}
+
+}

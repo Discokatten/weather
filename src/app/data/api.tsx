@@ -3,7 +3,14 @@ export default async function getWeather() {
   const params = {
     latitude: 59.3294,
     longitude: 18.0687,
-    daily: ["temperature_2m_mean", "weather_code"],
+    daily: [
+      "temperature_2m_mean",
+      "weather_code",
+      "precipitation_probability_max",
+      "rain_sum",
+      "snowfall_sum",
+      "precipitation_hours",
+    ],
     hourly: [
       "temperature_2m",
       "apparent_temperature",
@@ -85,8 +92,35 @@ export default async function getWeather() {
       ),
       temperature_2m_mean: daily.variables(0)!.valuesArray(),
       weather_code: daily.variables(1)!.valuesArray(),
+      precipitation_probability_max: daily.variables(2)!.valuesArray(),
+      rain_sum: daily.variables(3)!.valuesArray(),
+      snowfall_sum: daily.variables(4)!.valuesArray(),
+      precipitation_hours: daily.variables(5)!.valuesArray(),
     },
   };
 
+  return weatherData;
+}
+export async function getDaily() {
+  const weather = await getWeather();
+  const forecast = weather.daily;
+
+  // Convert float32array to regular array
+  const tempArray = Array.from(forecast.temperature_2m_mean!);
+  const codeArray = Array.from(forecast.weather_code!);
+  const rainArray = Array.from(forecast.rain_sum!);
+  const snowArray = Array.from(forecast.snowfall_sum!);
+  const precipitationHourArray = Array.from(forecast.precipitation_hours!);
+  const precipitationProbArray = Array.from(
+    forecast.precipitation_probability_max!
+  );
+  const weatherData = {
+    tempArray,
+    codeArray,
+    rainArray,
+    snowArray,
+    precipitationHourArray,
+    precipitationProbArray,
+  };
   return weatherData;
 }
