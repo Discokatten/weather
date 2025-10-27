@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Väderapp i NextJS
 
-## Getting Started
+En väderapp skapad i **NextJS** och med **Typescript**. Målet är att hämta väderdata från ett externt api, sedan ge förslag på vilka ytterkläder som är lämpliga för dagen.
+Detta projekt är skapat i utbildningssyfte för att fördjupa mig i NextJS och TypeScript.
 
-First, run the development server:
+## Innehållsförteckning
+
+- 📖 [Om projektet](#om-projektet)
+- ✨ [Funktioner](#funktioner)
+- 💡 [Kommande funktioner](#kommande-funktioner)
+- 🛠️ [Teknologier](#teknologier)
+- ⚙️ [Installation](#installation)
+- 👩‍💻 [Användning](#användning)
+- 🗂️ [Projektstruktur](#projektstruktur)
+- 📈 [Arbetsflöde](#arbetsflöde)
+- 🙋‍♀️ [Bidra](#bidra)
+- 🧾 [Licens](#licens)
+
+---
+
+## 📖 Om projektet
+
+Detta är ett projekt där målet var att bygga upp en minimalistisk väderapp för att få förslag på vilka ytterkläder som passar bäst under dagen.
+Sidan hämtar väderdata från ett externt api.
+Med hjälp av väderdatan och ett poängsystem för att kategorisera kläderna så ska sidan föreslå vilka kläder som är lämpliga för dagen, baserat på temperatur och förväntad nederbörd.
+
+Syftet är att träna på att
+
+- Hämta data från api
+- Sätta upp hämta data från lokal json-fil
+- Bryta ner krav och sprintplanera
+
+Projektet är tänkt att byggas ut med mer funktionalitet.
+
+---
+
+## ✨ Funktioner
+
+- [x] Dashboard med paralella routes
+- [x] En **väder-widget** med animation som visar **vädret** i Stockholm **just nu**
+- [x] En mer detaljerad överblick över vädret, som vind och luftfuktighet
+- [x] Överblick över hur resterande dagen ser ut, med 3h intervall
+- [x] Vädret för **kommande vecka**
+- [x] **Förslag på kläder** från en lokal json-fil baserat på väderdatan
+- [x] Poängsystem för att kategorisera kläder efter värme
+- [x] Logik för att avgöra vad som räknas som nederbörd
+- [x] Detaljerad information kring nederbörd samt en animation för övergripande väder under dagen.
+
+### 💡 Kommande funktioner:
+
+- [] Möjlighet att ändra location
+- [] Lägga till egna kläder
+- [] Lägga till storlek på kläderna
+- [] Detaljsida för att editera klädesplagg eller se mer information
+
+---
+
+## 🛠️ Teknologier
+
+- [Next.js 15 App Router](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Wave](https://wave.webaim.org/)
+- [OpenMeteo](https://open-meteo.com/)
+- [Meteocons](https://bas.dev/work/meteocons)
+- [Lucide](https://lucide.dev/)
+
+---
+
+## ⚙️ Installation
 
 ```bash
+
+# Klona repo
+git clone <https://github.com/Discokatten/weather>
+
+# Gå in i projektmappen
+cd <weather>
+
+# Installera beroenden
+npm -i
+
+# Starta utvecklingsserver
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 👩‍💻 Anvädning
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ Enkel dashboard där vänstra sidan visar väderinformation och högra sidan visar information om föreslagna kläder.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗂️ Projektstruktur
 
-## Learn More
+```
+|-- app/
+    |-- @clothes/
+        |-- page.tsx          # Dashboard kläder
+        |-- _components/      # Återanvändbara komponenter, kläder
+    |-- @weather/
+        |-- page.tsx          # Dashboard väder
+        |-- _components/      # Återanvändbara komponenter, väder
+    |-- components/           # Återanvändbara komponenter, hela sidan
+    |-- data/                 # Datahantering, fetch och json
+    |-- lib/                  # Utility och Interfaces
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📈 Arbetsflöde
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Ta fram en MVP
+- Trello för sprintplanering
+- Figmadesign baserad på challange från [Frontendmentor](https://www.frontendmentor.io/)
+- Började med att arbeta i featurebranches, gick sedan över till att enbart jobba i en dev-branch
+- Kontinuerlig testning och utvärdering innan merge
 
-## Deploy on Vercel
+## 🙋‍♀️ Bidra
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Vill du bidra?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Forka projektet
+2. Skapa en feature branch(`git switch -c <feature-name>`)
+3. Commit and push
+4. Send a pull-request
+
+---
+
+## 🧾 Licens
+
+Detta projekt är utvecklat i utbildningssyfte och är inte avsett för produktion

@@ -37,7 +37,7 @@ export default function RootLayout({
           <Navbar />
         </header>
         {children}
-        <main className="flex wrap gap-4 text-white">
+        <main className="flex wrap gap-4 text-white justify-center">
           {weather}
           {clothes}
         </main>

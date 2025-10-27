@@ -1,3 +1,4 @@
+import Image from "next/image";
 import overcast from "@bybas/weather-icons/design/fill/animation-ready/overcast.svg";
 import clearDay from "@bybas/weather-icons/design/fill/animation-ready/clear-day.svg";
 import overcastDay from "@bybas/weather-icons/design/fill/animation-ready/overcast-day.svg";
@@ -20,12 +21,11 @@ import thunderstormsDay from "@bybas/weather-icons/design/fill/animation-ready/t
 import thunderstormsSnow from "@bybas/weather-icons/design/fill/animation-ready/thunderstorms-snow.svg";
 import umbrella from "@bybas/weather-icons/design/fill/animation-ready/umbrella.svg";
 import snowflake from "@bybas/weather-icons/design/fill/animation-ready/snowflake.svg";
-import Image from "next/image";
 
 export default function WeatherAnimation({
-  weatherCodeProps,
+  weatherCode,
 }: {
-  weatherCodeProps: string;
+  weatherCode: string;
 }) {
   type TCode = { [code: string]: string };
 
@@ -65,7 +65,7 @@ export default function WeatherAnimation({
 
   return (
     <Image
-      src={weatherCodes[weatherCodeProps]}
+      src={weatherCodes[weatherCode]}
       alt="weather animation"
       width={300}
       height={300}

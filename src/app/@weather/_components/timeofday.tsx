@@ -17,7 +17,7 @@ export default async function TimeOfDay() {
             key={index}
             className="rounded-2xl h-50 w-50 content-center text-center"
           >
-            <p className="text-2xl">{item.title}:</p>
+            <h2 className="text-2xl">{item.title}:</h2>
             <WeatherCard
               key={index}
               temp={tempArray[item.time].toFixed(1)}

@@ -21,16 +21,23 @@
     "warmth": 0
   },
   {
-    "name": "Sneaker/stövel",
+    "name": "Stövlar",
     "type": "Shoe",
     "id": "2",
+    "layer": "rain",
+    "warmth": 1
+  },
+  {
+    "name": "Sneaker",
+    "type": "Shoe",
+    "id": "3",
     "layer": "shoe",
     "warmth": 1
   },
   {
     "name": "Kängor",
     "type": "Shoe",
-    "id": "3",
+    "id": "4",
     "layer": "shoe",
     "warmth": 3
   },
@@ -115,5 +122,19 @@
     "layer": "snow",
     "size": "52",
     "warmth": 4
+  },
+  {
+    "name": "Vantar",
+    "type": "Mittens",
+    "id": "8",
+    "layer": "mid",
+    "warmth": 3
+  },
+  {
+    "name": "Varma strumpor",
+    "type": "Socks",
+    "id": "9",
+    "layer": "mid",
+    "warmth": 3
   }
 ]

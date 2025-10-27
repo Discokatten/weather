@@ -1,7 +1,7 @@
 import { getDaily } from "@/app/data/api";
 import clothes from "@/app/data/outfits.json";
 import ClothesCard from "@/app/@clothes/_components/clothescard";
-import WeatherIcon from "@/app/@clothes/_components/weathericon";
+import WeatherAnimation from "../components/weatheranimation";
 
 export default async function RenderClothes() {
   const weather = await getDaily();
@@ -9,19 +9,21 @@ export default async function RenderClothes() {
   const precipitationProb = weather.precipitationProbArray[0];
   const rainMM = weather.rainArray[0];
   const precipitationHours = weather.precipitationHourArray[0];
-
+  const weatherCode = weather.codeArray[0];
+  let precipitation = weatherCode.toString();
+  let isRaining = false;
+  let isSnowing = false;
 
   // checks if it's gonna rain or snow today
-  let precipitation = "";
   async function isRain() {
     if (precipitationProb > 50) {
-      return rainMM > 1 ? (precipitation = "rain") : (precipitation = "snow");
+      return rainMM > 1 ? (isRaining = true) : (isSnowing = true);
     }
-    return;
-  } 
+  }
   // matches clothes.warmth to temperature
   async function checkPoints() {
     let points;
+
     return temp >= 20
       ? (points = 0)
       : temp >= 15
@@ -30,25 +32,25 @@ export default async function RenderClothes() {
       ? (points = 2)
       : temp >= 5
       ? (points = 3)
-      : (points = 4);
+      : temp > -5
+      ? (points = 4)
+      : (points = 5);
   }
 
   // basic filtering, filters clothes based on temp and weather
-  function findClothes(points: string, precipitation: string) {
-    const found = clothes.filter((i) => i.warmth.toString().includes(points));
-    const rain = found.filter((i) => i.layer.includes("rain"));
-    const snow = found.filter((i) => i.layer.includes("snow"));
+  function findClothes(points: number) {
+    const pointStr = points.toString();
 
-    return precipitation === "rain"
-      ? rain
-      : precipitation === "snow"
-      ? snow
-      : found;
+    const found = clothes.filter((i) => i.warmth.toString().includes(pointStr));
+    const rain = clothes.filter((i) => i.layer.includes("rain"));
+    const snow = clothes.filter((i) => i.layer.includes("snow"));
+
+    return isRaining ? rain : isSnowing ? snow : found;
   }
 
   await isRain();
-  const points = (await checkPoints()).toString();
-  const foundClothes = findClothes(points!, precipitation);
+  const points = await checkPoints();
+  const foundClothes = findClothes(points);
 
   return (
     <div className="bg-theme-800 rounded-2xl md:w-100 mb-2">
@@ -56,11 +58,12 @@ export default async function RenderClothes() {
       {foundClothes.map((item, i) => (
         <ClothesCard key={i} item={item.name} />
       ))}
+
       <ul className="bg-theme-700 border-1 border-theme-600 rounded-2xl content-center text-center p-3 m-4">
         <li>Medeltemperatur: {temp} °C</li>
         <li>Risk för nederbörd: {precipitationProb}%</li>
         <li>Under {precipitationHours} timmar</li>
-        <WeatherIcon icon={precipitation} />
+        <WeatherAnimation weatherCode={precipitation} />
       </ul>
     </div>
   );
