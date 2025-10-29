@@ -7,7 +7,7 @@ export default async function WeatherWidget() {
   const location = "Stockholm, Sverige";
 
   return (
-    <section className="flex bg-[url(/hero.svg)] bg-no-repeat bg-cover bg-center rounded-2xl h-77 md:max-w-240">
+    <section className="flex bg-[url(/hero.svg)] bg-no-repeat bg-cover bg-center mb-5 rounded-2xl h-77 md:max-w-240">
       {/* Get animation for current weather */}
       <div className="mr-0 ml-auto">
         <WeatherAnimation weatherCode={current.weather_code} />

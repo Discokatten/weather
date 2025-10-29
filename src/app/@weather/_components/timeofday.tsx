@@ -10,19 +10,19 @@ export default async function TimeOfDay() {
   const feelsArray = Array.from(hourly.apparent_temperature!);
 
   return (
-    <ul className="h-72 flex justify-around content-center">
+    <ul className="h-80 bg-theme-800 rounded-2xl p-3 mb-5 flex justify-around content-center">
       {TIMEOFDAY.map((item, index) => {
         return (
           <div
             key={index}
-            className="rounded-2xl h-50 w-50 content-center text-center"
+            className="rounded-2xl h-50 w-50 p-2 content-center text-center"
           >
-            <h2 className="text-2xl">{item.title}:</h2>
             <WeatherCard
               key={index}
               temp={tempArray[item.time].toFixed(1)}
               code={codeArray[index]}
               feels={feelsArray[item.time].toFixed(1)}
+              title={item.title}
             />
           </div>
         );
