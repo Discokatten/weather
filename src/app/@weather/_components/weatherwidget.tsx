@@ -12,8 +12,6 @@ export default async function WeatherWidget() {
       <div className="mr-0 ml-auto">
         <WeatherAnimation weatherCode={current.weather_code} />
       </div>
-
-      {/* Weather-data container */}
       <div className="content-center text-center mr-auto ml-0">
         {/* Show temperature */}
         <h2 className=" text-2xl sm:text-7xl">

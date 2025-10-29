@@ -13,6 +13,7 @@ export default async function RenderClothes() {
   const precipitation = weatherCode.toString();
   let isRaining = false;
   let isSnowing = false;
+  let points;
 
   // checks if it's gonna rain or snow today
   async function isRain() {
@@ -20,7 +21,6 @@ export default async function RenderClothes() {
       return rainMM > 1 ? (isRaining = true) : (isSnowing = true);
     }
   }
-  let points;
   // matches clothes.warmth to temperature
   async function checkPoints(): Promise<number> {
     return temp >= 20

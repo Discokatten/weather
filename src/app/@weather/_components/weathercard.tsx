@@ -12,7 +12,7 @@ export default function WeatherCard({
   title?: string;
 }) {
   return (
-    <li className="bg-theme-800 border-2 p-2 border-theme-600 rounded-2xl content-center text-center m-2">
+    <li className="bg-theme-800 p-2 border-theme-600 rounded-2xl content-center text-center m-2">
       <h2 className="mb-2 mt-2 text-2xl">{title} </h2>
       <p className="mb-2 mt-2 text-xl">{temp} °C</p>
       <p className="mt-2 text-s">{feels}</p>
