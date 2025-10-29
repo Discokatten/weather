@@ -4,16 +4,14 @@ import WeatherAnimation from "@/app/components/weatheranimation";
 export default async function WeatherWidget() {
   const weather = await getWeather();
   const current = weather.current;
-  let location = "Stockholm, Sverige";
+  const location = "Stockholm, Sverige";
 
   return (
-    <section className="flex bg-[url(/hero.svg)] bg-no-repeat bg-cover bg-center rounded-2xl h-77 md:max-w-240">
+    <section className="flex bg-[url(/hero.svg)] bg-no-repeat bg-cover bg-center mb-5 rounded-2xl h-77 md:max-w-240">
       {/* Get animation for current weather */}
       <div className="mr-0 ml-auto">
         <WeatherAnimation weatherCode={current.weather_code} />
       </div>
-
-      {/* Weather-data container */}
       <div className="content-center text-center mr-auto ml-0">
         {/* Show temperature */}
         <h2 className=" text-2xl sm:text-7xl">
