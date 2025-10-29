@@ -10,7 +10,7 @@ export default async function RenderClothes() {
   const rainMM = weather.rainArray[0];
   const precipitationHours = weather.precipitationHourArray[0];
   const weatherCode = weather.codeArray[0];
-  let precipitation = weatherCode.toString();
+  const precipitation = weatherCode.toString();
   let isRaining = false;
   let isSnowing = false;
 
@@ -20,10 +20,9 @@ export default async function RenderClothes() {
       return rainMM > 1 ? (isRaining = true) : (isSnowing = true);
     }
   }
+  let points;
   // matches clothes.warmth to temperature
-  async function checkPoints() {
-    let points;
-
+  async function checkPoints(): Promise<number> {
     return temp >= 20
       ? (points = 0)
       : temp >= 15
@@ -49,8 +48,7 @@ export default async function RenderClothes() {
   }
 
   await isRain();
-  const points = await checkPoints();
-  const foundClothes = findClothes(points);
+  const foundClothes = findClothes(await checkPoints());
 
   return (
     <div className="bg-theme-800 rounded-2xl md:w-100 mb-2">

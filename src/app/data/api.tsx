@@ -37,11 +37,6 @@ export default async function getWeather() {
   const response = responses[0];
 
   // Attributes for timezone and location
-  const latitude = response.latitude();
-  const longitude = response.longitude();
-  const elevation = response.elevation();
-  const timezone = response.timezone();
-  const timezoneAbbreviation = response.timezoneAbbreviation();
   const utcOffsetSeconds = response.utcOffsetSeconds();
 
   const current = response.current()!;

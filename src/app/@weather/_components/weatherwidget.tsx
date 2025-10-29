@@ -4,7 +4,7 @@ import WeatherAnimation from "@/app/components/weatheranimation";
 export default async function WeatherWidget() {
   const weather = await getWeather();
   const current = weather.current;
-  let location = "Stockholm, Sverige";
+  const location = "Stockholm, Sverige";
 
   return (
     <section className="flex bg-[url(/hero.svg)] bg-no-repeat bg-cover bg-center rounded-2xl h-77 md:max-w-240">
