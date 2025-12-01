@@ -1,7 +1,7 @@
-import DailyForecast from "@/app/@weather/_components/dailyforecast";
-import TimeOfDay from "@/app/@weather/_components/timeofday";
-import WeatherDetails from "@/app/@weather/_components/weatherdetails";
-import WeatherWidget from "@/app/@weather/_components/weatherwidget";
+import DailyForecast from '@/app/@weather/_components/DailyForecast'
+import TimeOfDay from '@/app/@weather/_components/TimeOfDay'
+import WeatherDetails from '@/app/@weather/_components/WeatherDetails'
+import WeatherWidget from '@/app/@weather/_components/WeatherWidget'
 
 export default function RenderWeather() {
   return (
@@ -12,5 +12,5 @@ export default function RenderWeather() {
       <TimeOfDay />
       <DailyForecast />
     </div>
-  );
+  )
 }
