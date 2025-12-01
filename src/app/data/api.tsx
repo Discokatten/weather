@@ -31,10 +31,9 @@ export default async function getWeather() {
     temporal_resolution: "hourly_1",
     wind_speed_unit: "ms",
   };
+
   const url = "https://api.open-meteo.com/v1/forecast";
-  const responses = await fetchWeatherApi(`${url}, ${params}`, {
-    cache: "no-store", // makes the site fetch data on demand
-  });
+  const responses = await fetchWeatherApi(url, params );
   // Process first location. Add a for-loop for multiple locations or weather models
   const response = responses[0];
 
