@@ -1,135 +1,178 @@
-{
-  "clothes": {
-    "hats": [
-      {
-        "name": "Tunn",
-        "id": "1",
-        "layer": "hat",
-        "warmth": 2,
-        "weather": [{ "snow": 0, "warmth": 1, "wind": 3, "rain": 2 }]
-      },
-      {
-        "name": "Tjock ",
-        "id": "1",
-        "layer": "hat",
-        "warmth": 3,
-        "weather": [{ "snow": 0, "warmth": 1, "wind": 3, "rain": 2 }]
-      }
-    ],
-    "shoes": [
-      {
-        "name": "Sandaler",
-        "id": "1",
-        "layer": "shoe",
-        "warmth": 0,
-        "weather": [{ "snow": 0, "warmth": 1, "wind": 3, "rain": 2 }]
-      },
-      {
-        "name": "Sneaker/stövel",
-        "id": "2",
-        "layer": "shoe",
-        "warmth": 1,
-        "weather": [{ "snow": 0, "warmth": 1, "wind": 3, "rain": 2 }]
-      },
-      {
-        "name": "Kängor",
-        "id": "3",
-        "layer": "shoe",
-        "warmth": 3,
-        "weather": [{ "snow": 0, "warmth": 1, "wind": 3, "rain": 2 }]
-      }
-    ],
-    "jackets": [
-      {
-        "name": "Sommarjacka",
-        "id": "1",
-        "layer": "out",
-        "warmth": 1,
-        "weather": [{ "snow": 0, "warmth": 1, "wind": 3, "rain": 2 }]
-      },
-      {
-        "name": "Regnjacka",
-        "id": "2",
-        "layer": "out",
-        "warmth": 2,
-        "requires": [{ "rain": true }],
-
-        "weather": [{ "snow": 1, "wind": 3, "rain": 3 }]
-      },
-      {
-        "name": "Vinterjacka",
-        "id": "3",
-        "layer": "out",
-        "warmth": 4,
-        "weather": [{ "snow": 3, "wind": 2, "rain": 2 }]
-      },
-      {
-        "name": "Vindfleece/skaljacka",
-        "id": "4",
-        "layer": "mid",
-        "warmth": 3,
-        "weather": [{ "snow": 3, "wind": 2, "rain": 2 }]
-      },
-      {
-        "name": "Tjocktröja/fleece/ull",
-        "id": "5",
-        "layer": "mid",
-        "warmth": 2,
-        "weather": [{ "snow": 1, "wind": 3, "rain": 3 }]
-      },
-      {
-        "name": "Tshirt/linne",
-        "id": "6",
-        "layer": "in",
-        "warmth": 0,
-        "weather": [{ "snow": 0, "wind": 0, "rain": 0 }]
-      }
-    ],
-
-    "pants": [
-      {
-        "name": "Shorts",
-        "layer": "in",
-        "id": "4",
-        "size": "92",
-        "warmth": 0,
-        "weather": [{ "snow": 0, "wind": 0, "rain": 0 }]
-      },
-      {
-        "name": "Tights",
-        "layer": "in",
-        "id": "4",
-        "size": "92",
-        "warmth": 1,
-        "weather": [{ "snow": 0, "wind": 0, "rain": 0 }]
-      },
-      {
-        "name": "Regnbyxor",
-        "id": "5",
-        "layer": "out",
-
-        "size": "52",
-        "warmth": 2,
-        "requires": [{ "rain": true }],
-        "weather": [{ "snow": 2, "wind": 3, "rain": 3 }]
-      },
-      {
-        "name": "Tjocka byxor/fleece/ull",
-        "id": "6",
-        "layer": "mid",
-        "size": "52",
-
-        "warmth": 2,
-        "weather": [{ "snow": 2, "wind": 3, "rain": 3 }]
-      },
-      {
-        "name": "Täckbyxor",
-        "id": "7",
-        "layer": "out",
-        "size": "52",
-        "warmth": 3,
-        "weather": [{ "snow": 2, "wind": 3, "rain": 3 }]
-      }
-    ]
+[
+  {
+    "name": "Tunn mössa",
+    "type": "hat",
+    "id": "1",
+    "layer": "hat",
+    "warmth": 2,
+    "season": ["autumn", "spring"],
+    "weather": []
+  },
+  {
+    "name": "Tjock mössa",
+    "type": "hat",
+    "id": "1",
+    "layer": "hat",
+    "warmth": 3,
+    "season": ["winter"],
+    "weather": ["snow"]
+  },
+  {
+    "name": "Sandaler",
+    "type": "shoe",
+    "id": "1",
+    "layer": "shoe",
+    "warmth": 0,
+    "season": ["summer"],
+    "weather": []
+  },
+  {
+    "name": "Stövlar",
+    "type": "shoe",
+    "id": "2",
+    "layer": "shoe",
+    "warmth": 1,
+    "season": ["autumn", "spring", "summer"],
+    "weather": ["rain"]
+  },
+  {
+    "name": "Sneaker",
+    "type": "shoe",
+    "id": "3",
+    "layer": "shoe",
+    "warmth": 1,
+    "season": ["autumn", "spring"],
+    "weather": []
+  },
+  {
+    "name": "Kängor",
+    "type": "shoe",
+    "id": "4",
+    "layer": "shoe",
+    "warmth": 3,
+    "season": ["winter"],
+    "weather": ["snow"]
+  },
+  {
+    "name": "Sommarjacka",
+    "type": "jacket",
+    "id": "1",
+    "layer": "shell",
+    "warmth": 1,
+    "weather": [],
+    "season": ["summer"]
+  },
+  {
+    "name": "Regnjacka",
+    "type": "jacket",
+    "id": "2",
+    "layer": "shell",
+    "warmth": 2,
+    "season": ["autumn", "spring", "summer"],
+    "weather": ["rain"]
+  },
+  {
+    "name": "Vinterjacka",
+    "type": "jacket",
+    "id": "3",
+    "layer": "shell",
+    "warmth": 4,
+    "season": ["winter"],
+    "weather": ["snow"]
+  },
+  {
+    "name": "Vindfleece/skaljacka",
+    "type": "jacket",
+    "id": "4",
+    "layer": "shell",
+    "warmth": 3,
+    "season": ["autumn", "spring"],
+    "weather": []
+  },
+  {
+    "name": "Tjocktröja/fleece/ull",
+    "type": "jacket",
+    "id": "5",
+    "layer": "mid",
+    "warmth": 2,
+    "season": ["autumn", "spring"],
+    "weather": []
+  },
+  {
+    "name": "Tshirt/linne",
+    "type": "tshirt",
+    "id": "6",
+    "layer": "light",
+    "warmth": 0,
+    "season": ["summer"],
+    "weather": []
+  },
+  {
+    "name": "Shorts",
+    "type": "pants",
+    "layer": "light",
+    "id": "4",
+    "size": "92",
+    "warmth": 0,
+    "season": ["summer"],
+    "weather": []
+  },
+  {
+    "name": "Tights",
+    "type": "pants",
+    "layer": "light",
+    "id": "4",
+    "size": "92",
+    "warmth": 1,
+    "season": ["summer"],
+    "weather": []
+  },
+  {
+    "name": "Regnbyxor",
+    "type": "pants",
+    "id": "5",
+    "layer": "shell",
+    "size": "52",
+    "warmth": 2,
+    "season": ["summer", "autumn", "spring"],
+    "weather": ["rain"]
+  },
+  {
+    "name": "Tjocka byxor/fleece/ull",
+    "type": "pants",
+    "id": "6",
+    "layer": "wool",
+    "size": "52",
+    "warmth": 2,
+    "season": ["autumn", "spring"],
+    "weather": []
+  },
+  {
+    "name": "Täckbyxor",
+    "type": "pants",
+    "id": "7",
+    "layer": "shell",
+    "size": "52",
+    "warmth": 4,
+    "season": ["winter"],
+    "weather": ["snow"]
+  },
+  {
+    "name": "Vantar",
+    "type": "mittens",
+    "id": "8",
+    "layer": "shell",
+    "warmth": 3,
+    "season": ["winter"],
+    "weather": ["snow"]
+  },
+  {
+    "name": "Varma strumpor",
+    "type": "socks",
+    "id": "9",
+    "layer": "mid",
+    "warmth": 3,
+    "season": ["winter"],
+    "weather": ["snow"]
   }
-}
+]

@@ -1,4 +1,4 @@
-import { Settings, ChevronDown } from "lucide-react";
+import { Settings, ChevronDown } from 'lucide-react'
 export default function MenuButton() {
   return (
     // Not functional yet
@@ -7,5 +7,5 @@ export default function MenuButton() {
       Meny
       <ChevronDown className="h-5" />
     </button>
-  );
+  )
 }
