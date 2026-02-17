@@ -5,6 +5,7 @@ export const TIMEOFDAY = [
   { title: 'Kväll', time: 18 },
 ]
 
+// ClothingLayers
 export const baseLayers = {
   NONE: ['none', 'shoe'],
   LIGHT: ['light', 'shoe'],

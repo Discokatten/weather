@@ -1,7 +1,7 @@
 import { baseLayers, extraLayers } from '@/app/lib/consts'
 export const getLayers = (temp: number): string[] => {
   return temp >= 20
-    ? baseLayers.LIGHT
+    ? baseLayers.NONE
     : temp >= 15
       ? baseLayers.LIGHT
       : temp >= 10
