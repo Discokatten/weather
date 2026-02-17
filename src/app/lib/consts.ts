@@ -4,3 +4,15 @@ export const TIMEOFDAY = [
   { title: 'Mitt på dagen', time: 12 },
   { title: 'Kväll', time: 18 },
 ]
+
+export const baseLayers = {
+  NONE: ['none', 'shoe'],
+  LIGHT: ['light', 'shoe'],
+  MID: ['mid', 'shoe'],
+  BASELAYER: ['shell', 'mid', 'hat', 'mittens', 'shoe'],
+  WINTERLAYER: ['mid', 'shell', 'hat', 'mittens', 'shoe'],
+}
+export const extraLayers = {
+  WITHWOOL: [...baseLayers.BASELAYER, 'wool'],
+  COLDWINTER: ['wool', ...baseLayers.WINTERLAYER],
+}

@@ -1,20 +1,16 @@
+import { baseLayers, extraLayers } from '@/app/lib/consts'
 export const getLayers = (temp: number): string[] => {
-  const base = ['shell', 'mid', 'hat', 'mittens']
-  const withWool = [...base, 'wool']
-  const winter = ['mid', 'shell', 'hat', 'mittens']
-  const coldWinter = ['wool', ...winter]
-
   return temp >= 20
-    ? ['none', 'shoe']
+    ? baseLayers.LIGHT
     : temp >= 15
-      ? ['light', 'shoe']
+      ? baseLayers.LIGHT
       : temp >= 10
-        ? ['mid']
+        ? baseLayers.MID
         : temp >= 5
-          ? base
+          ? baseLayers.BASELAYER
           : temp >= 0
-            ? withWool
+            ? extraLayers.WITHWOOL
             : temp > -5
-              ? winter
-              : coldWinter
+              ? baseLayers.WINTERLAYER
+              : extraLayers.COLDWINTER
 }

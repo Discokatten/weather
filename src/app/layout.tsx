@@ -1,38 +1,35 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/navbar";
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import './globals.css'
+import Navbar from './components/Navbar'
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
-  title: "What to wear today?",
-  description:
-    "Weather-app that helps you choose what clothes is best suited for todays weather",
-};
+  title: 'What to wear today?',
+  description: 'Weather-app that helps you choose what clothes is best suited for todays weather',
+}
 
 export default function RootLayout({
   children,
   weather,
   clothes,
 }: Readonly<{
-  children: React.ReactNode;
-  weather: React.ReactNode;
-  clothes: React.ReactNode;
+  children: React.ReactNode
+  weather: React.ReactNode
+  clothes: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <header>
           <Navbar />
         </header>
@@ -43,5 +40,5 @@ export default function RootLayout({
         </main>
       </body>
     </html>
-  );
+  )
 }
